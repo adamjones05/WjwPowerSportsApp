@@ -1,0 +1,20 @@
+<h1>Delete Customer</h1>
+<div class="container">
+  <div class="form-container">
+    <div>
+      <label>Customer Id:</label>
+      <input [(ngModel)]="customerId" 
+      (input)="checkForm()"
+      (keydown.enter)="DeleteCustomerId()" 
+      />
+    </div>
+    <button (click)="DeleteCustomerId()" 
+    [ngClass]="{'success': updateSuccess}"
+    [ngClass]="{'error': updateError}"
+    [ngClass]="{'error': notFound}"
+    >Delete</button>
+  </div>
+
+  <p *ngIf="updateSuccess">✅ Customer deleted successfully!</p>
+  <p *ngIf="updateError">❌ Error deleting customer</p>
+  <p *ngIf="notFound">❌ Customer not found</p>

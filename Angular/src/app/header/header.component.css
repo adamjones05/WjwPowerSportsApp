@@ -1,0 +1,63 @@
+/* Font styling */
+.font {
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: navy;
+  text-decoration: none;
+}
+
+/* Header container */
+.header {
+    position: fixed;     
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;        /* Make sure it's higher than any other elements */
+  background-color: white; /* Prevents transparency overlap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for better visibility */
+}
+
+/* Nav layout */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo/Home */
+.logo {
+  font-size: 1em;
+  color: #003366;
+  cursor: pointer;
+  border: navy 2px solid;
+  border-radius: 10px;
+  padding:0.5rem 1rem;
+}
+
+.logo:hover {
+  background-color: navy;
+  color: white;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  padding: 2%;
+}
+
+/* Each nav box */
+.nav-item {
+  padding: 0.5rem 1rem;
+  border: 2px solid navy;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-item:hover {
+  background-color: navy;
+  color: white;
+}
+
