@@ -7,11 +7,11 @@ import { catchError, Observable, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class SqlApiService {
-  private getUrl = 'http://localhost:5000/customer/GetCustomers'; // Update with actual API URL
+  private getUrl = 'http://localhost:5000/customer/GetCustomers';
   private deleteUrl = 'http://localhost:5000/customer/DeleteCustomer';
-  private updateUrl = 'http://localhost:5000/customer/UpdateCustomer'; // Base URL for customer API
-  private addUrl = 'http://localhost:5000/customer/AddCustomer'; // Base URL for customer API
-  private getSingleUrl = 'http://localhost:5000/customer/GetCustomer'; // Base URL for customer API
+  private updateUrl = 'http://localhost:5000/customer/UpdateCustomer';
+  private addUrl = 'http://localhost:5000/customer/AddCustomer';
+  private getSingleUrl = 'http://localhost:5000/customer/GetCustomer';
   customerList: Array<CustomerType> = [];
 
   constructor(private http: HttpClient) {}
