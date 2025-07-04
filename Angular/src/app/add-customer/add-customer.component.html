@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+<div class="container">
+  <div class="form-container green-header">
+    <div>
+      <label>First Name:</label>
+      <input [(ngModel)]="customer.firstName" (input)="checkForm()"/>
+    </div>
+    <div>
+      <label>Last Name:</label>
+      <input [(ngModel)]="customer.lastName" (input)="checkForm()"/>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input [(ngModel)]="customer.email" (input)="checkForm()"/>
+    </div>
+    <div>
+      <label>Phone:</label>
+      <input [(ngModel)]="customer.phone"
+      (keydown.enter)="saveCustomer()"
+      (input)="checkForm()"/>
+    </div>
+    <button (click)="saveCustomer()" [ngClass]="{'success': updateSuccess}">Add</button>
+  </div>
+  <div class="red-header" style="flex: 1 1 0%">
+    <ag-grid-angular
+      style="height: 375px; width: 100%;"
+      [columnDefs]="colDefs"
+      [defaultColDef]="defaultColDef"
+      [rowData]="data"
+      [theme]="theme2"
+    ></ag-grid-angular>
+  </div>
+</div>
+
+<p *ngIf="updateSuccess">Customer added successfully!</p>
+<p *ngIf="updateError">There was an error adding customer.</p>

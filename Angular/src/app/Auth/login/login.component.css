@@ -1,0 +1,114 @@
+/* Shared form styling */
+h1 {
+  font-size: 24px;
+  color: navy;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+form.user-page-border {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Two-column layout for inputs */
+.grid50 {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 24px;
+}
+
+/* Submit button container */
+.grid25 {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Field block */
+.field-space {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.bold-text {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Submit button */
+button {
+  margin-top: 24px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Link styling */
+a.nav-item.font {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+a.nav-item.font:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .grid50 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid25 {
+    justify-content: flex-start;
+  }
+
+  form.user-page-border {
+    padding: 24px 16px;
+  }
+}
