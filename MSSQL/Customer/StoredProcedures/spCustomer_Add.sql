@@ -14,11 +14,11 @@ BEGIN
         )
     VALUES
         (
-            @FirstName,
-            @LastName,
-            @Email,
-            @Phone )
+        @FirstName,
+        @LastName,
+        @Email,
+        @Phone 
+        )
 END
-
 GO
 
