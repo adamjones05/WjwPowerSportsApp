@@ -1,0 +1,62 @@
+<h1>WjwPowerSports</h1>
+<form class="user-page-border" (ngSubmit)="submitRegistration()">
+  <div class="grid50">
+    <div class="field-space">
+      <label class="bold-text"> First Name: </label>
+      <div>
+        <input name="firstName" [(ngModel)]="registration.firstName" />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Last Name </label>
+      <div>
+        <input name="lastName" [(ngModel)]="registration.lastName" />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Password: </label>
+      <div>
+        <input
+          name="password"
+          type="password"
+          [(ngModel)]="registration.password"
+        />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Email: </label>
+      <div>
+        <input name="email" [(ngModel)]="registration.email" />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Password Confirm: </label>
+      <div>
+        <input
+          name="passwordConfirm"
+          type="password"
+          [(ngModel)]="registration.passwordConfirm"
+        />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> City: </label>
+      <div>
+        <input name="city" [(ngModel)]="registration.city" />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Gender: </label>
+      <div>
+        <input name="gender" [(ngModel)]="registration.gender" />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid25">
+    <div></div>
+    <div></div>
+    <div></div>
+    <button class="field-space" type="submit">Register</button>
+  </div>
+</form>

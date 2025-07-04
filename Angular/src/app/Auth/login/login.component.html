@@ -1,0 +1,26 @@
+<h1>WjwPowerSports</h1>
+<form class="user-page-border auth-form-holder" (ngSubmit)="submitLogin()">
+  <div class="grid50">
+    <div class="field-space">
+      <label class="bold-text"> Username: </label>
+      <div>
+        <input name="email" [(ngModel)]="login.email" />
+      </div>
+    </div>
+    <div class="field-space">
+      <label class="bold-text"> Password: </label>
+      <div>
+        <input name="password" type="password" [(ngModel)]="login.password" />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid25">
+    <div></div>
+    <div></div>
+    <div></div>
+    <button class="field-space" type="submit">Login</button>
+  </div>
+</form>
+<br />
+<a class="nav-item font" [routerLink]="['/register']">Create Account</a>
